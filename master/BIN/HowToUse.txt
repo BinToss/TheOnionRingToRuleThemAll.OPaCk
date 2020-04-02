@@ -1,0 +1,61 @@
+===Step 1: 
+Make sure inplace1.ipak and the imeta of your map are backed up.
+
+
+
+===Step 2: 
+Decompress inplace1.ipak using MCCCEADeflate. I included this tool.
+
+Use this command:
+
+MCCCEADeflate -d inplace1.ipak inplace1.uipak
+
+In order to avoid confusion between compressed and decompressed versions of the ipak, this program requires the decompressed version to use the .uipak file extension.
+
+
+
+===Step 3: 
+Place inplace1.uipak and your map's imeta (for example, sidewinder.imeta) into the 'unmodded' folder.
+
+
+
+===Step 4: 
+Fire up the included Batch Bitmap Extractor program. 
+
+Ensure that the tags directory for the program is configured correctly.
+
+Make sure that the output format is set to DDS. Add your custom bitmap tags and click "extract bitmaps".
+
+Now, the tool was designed for a 'normal' (pre-invader) HEK setup, so it's going to output the files into a corresponding 'data' folder. Find it.
+
+Copy DDS files from your 'data' folder to the 'DDS' folder of OPaCk, while preserving your directory structure. Treat it as if the DDS folder is really the tags folder and that the .DDS files are really .bitmap tags. Do not rename the files. Also, while this program is coded to only search for the .DDS file extension, you may want to keep the folders clean of anything but DDS files.
+
+
+===Step 5:
+Run OPaCk!
+
+The syntax is:
+
+OPaCk.exe <your imeta name, including file extension>
+
+For example:
+
+OPaCk.exe sidewinder.imeta.
+
+It will look for the imeta and uipak in the 'unmodded' folder. After running for a bit (or giving you an error message. Not all DDS compression formats are supported, and other things can go wrong) it will spit out rebuilt versions of the files into the 'rebuilt' folder.
+
+
+===Step 6:
+If everything has gone fine up until this point, then that's a good sign. Now try it out in the game!
+
+Recompress your rebuilt ipak using MCCCEADeflate. 
+
+Use this command:
+
+MCCCEADeflate -c inplace1.uipak inplace1.ipak
+
+Once that's done, copy your rebuilt imeta and the compressed imeta to your MCC paks folder.
+
+If something went wrong (like I said, the MCC is very strict about how it expects its texture data to be stored) then the game will crash upon trying to load your map. A crash can either take the form of an error message box or an infinite freeze.
+
+If it crashes, it's most likely just an supported texture scheme that I haven't figured out yet. Try experimenting with what textures you include and which ones you don't.

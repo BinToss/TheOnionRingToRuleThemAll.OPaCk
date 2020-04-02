@@ -1,0 +1,9 @@
+TODO:
+
+-Add workflow for working with multiple imetas.
+
+-Add support for reading and parsing HEK bitmap tags directly.
+
+-Make it store textures in the ipak more efficiently.
+
+-Other crap that I can't think of at the moment.
