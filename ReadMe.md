@@ -1,4 +1,4 @@
-#OPaCk
+# OPaCk
 > An Ipak and Imeta repacker for Halo: Combat Evolved Anniversary of The Master Chief Collection (Windows).
 
 OPaCk is currently a modder-oriented application, but it will eventually become a user-oriented program.
